@@ -1,0 +1,9 @@
+{% extends "base/base.html" %}
+{% block titulo %}Profile{% endblock %}
+{% block cuerpo %}
+<h1>Profile</h1>
+Username: {{user.username}} <br />
+Nombre: {{user.first_name}} <br />
+Apellidos: {{user.last_name}} <br />
+Email: {{user.email}} <br />
+{% endblock %}
