@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+{% block titulo %}Login{% endblock %}
+{% block cuerpo %}
+<h1>Inicio de sesión</h1>
+<center>
+<form class="form-signin" method='post' action=''>{% csrf_token %}
+	Username: {{form.username}} <br/>
+	<br>
+	Password: {{form.password}} <br/>
+	<br>
+	<input type="submit" value="Login">
+</form>
+</center>
+
+<h1>Registro</h1>
+<p>Nuevos usuario</p>
+<center>
+<a href="{% url 'create_user' %}"><button>Crear Usuario</button></a>
+{% endblock %}
+</center>
