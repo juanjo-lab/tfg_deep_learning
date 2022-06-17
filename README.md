@@ -4,7 +4,8 @@
 ##### Tutores: Carabias Orti, Julio José y Cañadas Quesada, Francisco.
 =======================================================================
 
-###### *Resumen*
+#### *Resumen*
+
 El número de pacientes que padecen de diabetes mellitus tipo 1 ha ido incrementando
 significativamente durante los últimos 40 años. Es estimado que en 1980 había cerca de
 108 millones de adultos con diabetes. Hoy en día se conoce que afecta a más de 460
@@ -56,3 +57,7 @@ estadísticos que utiliza variaciones y regresiones de datos estadísticos con e
 encontrar patrones para predicción hacia el futuro; además se desarrollará una aplicación
 para pacientes T1DM en la que podrán obtener gráficas con predicciones de sus valores
 de BG.
+
+
+#### *Guía*
+
