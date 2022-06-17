@@ -1,1 +1,5 @@
-Proyecto Base en django-1.9.8, incorpora una aplicacion que gestiona la autenticación de usuarios, login, register y logout, change password, incorpora una base común y estáticos comunes.
+# DESARROLLO DE UN SISTEMA INTELIGENTE DE CONTROL DE DIABETES DE TIPO 1 BASADO EN MODELOS PREDICTIVOS.
+======================================================================================================
+##### Author: Juan José Martínez Cámara
+##### Tutores: Carabias Orti, Julio José y Cañadas Quesada, Francisco.
+-------------------------------------------------------------------------------------------------------
