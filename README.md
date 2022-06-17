@@ -1,8 +1,8 @@
 # DESARROLLO DE UN SISTEMA INTELIGENTE DE CONTROL DE DIABETES DE TIPO 1 BASADO EN MODELOS PREDICTIVOS.
-============================================================================================
+=======================================================================
 ##### Author: Juan José Martínez Cámara
 ##### Tutores: Carabias Orti, Julio José y Cañadas Quesada, Francisco.
-============================================================================================
+=======================================================================
 
 ###### *Resumen*
 El número de pacientes que padecen de diabetes mellitus tipo 1 ha ido incrementando
