@@ -4,6 +4,8 @@
 ##### Tutores: Carabias Orti, Julio José y Cañadas Quesada, Francisco.
 =======================================================================
 
+- 👋 Hi, I’m @juanjo-lab
+
 #### *Resumen*
 
 El número de pacientes que padecen de diabetes mellitus tipo 1 ha ido incrementando
