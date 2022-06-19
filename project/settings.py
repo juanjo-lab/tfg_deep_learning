@@ -32,7 +32,7 @@ Se debe de coloar la ip local de nuestro ordenador:
 Windows: ipconfig
 Linux: ifconfig
 '''
-ALLOWED_HOSTS = ['192.168.0.22']
+ALLOWED_HOSTS = ['IP_LOCAL']
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -154,6 +154,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 # Datos de cuenta Gmail
 EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'tfg.deep.learning@gmail.com'
-EMAIL_HOST_PASSWORD = 'pnwtoggiyhcjqfva' # Se podrian usar hash para que no sea visible, pero como es una prueba...
+EMAIL_HOST_USER = 'CORREO_DE_TRABAJO_@gmail.com'
+EMAIL_HOST_PASSWORD = 'CLAVE_DE_APP' # Se podrian usar hash para que no sea visible, pero como es una prueba...
 EMAIL_USE_TLS = True
