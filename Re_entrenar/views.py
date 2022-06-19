@@ -78,7 +78,7 @@ def send__email(mail,username):
     )#(titulo de correo, mensaje descriptivo, cuenta de correo, destinatarios)
 
     #adjuntar archivos
-    filename ="/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Re_entrenar/"+username+"/Re_entrenar_"+username+".jpg"
+    filename ="<<PATH_USUARIO>>/prueba_1/media/Re_entrenar/"+username+"/Re_entrenar_"+username+".jpg"
     attachment = open(filename, 'rb')
     part = MIMEBase('application', 'octet-stream')
     part.set_payload((attachment).read())
@@ -116,8 +116,8 @@ def LSTM_Re_entrenar(request,Patient):
     ########################################################################################################################
     print('\n Preparar variables')
 
-    initial_path = '/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Re_entrenar/'+Patient+'/'
-    initial_path_cp = '/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Predecir/'+Patient+'/'
+    initial_path = '<<PATH_USUARIO>>/prueba_1/media/Re_entrenar/'+Patient+'/'
+    initial_path_cp = '<<PATH_USUARIO>>/prueba_1/media/Predecir/'+Patient+'/'
     input_train_file_name_prefix = Patient
     input_test_file_name_prefix = Patient
 
@@ -277,7 +277,7 @@ def LSTM_Re_entrenar(request,Patient):
     plt.xlabel("a Epoca")
     plt.ylabel("Magnitud de pérdida")
     plt.plot(history.history["loss"])
-    plt.savefig("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Re_entrenar/"+Patient+"/Perdidas_" + Patient + ".jpg",bbox_inches="tight")
+    plt.savefig("<<PATH_USUARIO>>/prueba_1/media/Re_entrenar/"+Patient+"/Perdidas_" + Patient + ".jpg",bbox_inches="tight")
 
 ###############################################################################################################################
 
@@ -348,7 +348,7 @@ def LSTM_Re_entrenar(request,Patient):
     plt.xlabel('Puntos temporales')
     plt.ylabel('Valores de Glucosa [BG]')
     plt.legend()
-    plt.savefig("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Re_entrenar/" + Patient + "/Re_entrenar_" + Patient + ".jpg",bbox_inches="tight")
+    plt.savefig("<<PATH_USUARIO>>/prueba_1/media/Re_entrenar/" + Patient + "/Re_entrenar_" + Patient + ".jpg",bbox_inches="tight")
     ########################################################################################################################
 
 
