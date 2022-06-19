@@ -31,6 +31,8 @@ Tras la creación dentro de la aplicacion, el informe tras la predicción que se
 #### *Notas*
 
 - Se enviará un correo de confirmación tras la creación de la red neuronal, tras su reajuste así como el informe enseñado anteriormente tras cada predicción.
+- Cambiar los <<PATH_USUARIO>> por el path donde se aloje este proyecto.
+- Notebooks contiene los ficheros empleados para la investigación.
 
 #### *Trabajo futuro*
 
