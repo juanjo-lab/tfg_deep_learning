@@ -80,14 +80,14 @@ def send_email(mail,username,BOLO_12h,BOLO_24h,CF):
     )#(titulo de correo, mensaje descriptivo, cuenta de correo, destinatarios)
 
     #adjuntar archivos
-    filename_12h = "/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Predecir/" + username + "/Prediccion_" + username + "_12h.jpg"
+    filename_12h = "<<PATH_USUARIO>>/prueba_1/media/Predecir/" + username + "/Prediccion_" + username + "_12h.jpg"
     attachment_12h = open(filename_12h, 'rb')
     part_12h = MIMEBase('application', 'octet-stream')
     part_12h.set_payload((attachment_12h).read())
     encoders.encode_base64(part_12h)
     part_12h.add_header('Content-Disposition', "attachment; filename= " + "Prediccion_12h.jpg")
 
-    filename_24h = "/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Predecir/" + username + "/Prediccion_" + username + "_24h.jpg"
+    filename_24h = "<<PATH_USUARIO>>/prueba_1/media/Predecir/" + username + "/Prediccion_" + username + "_24h.jpg"
     attachment_24h = open(filename_24h, 'rb')
     part_24h = MIMEBase('application', 'octet-stream')
     part_24h.set_payload((attachment_24h).read())
@@ -95,7 +95,7 @@ def send_email(mail,username,BOLO_12h,BOLO_24h,CF):
     part_24h.add_header('Content-Disposition', "attachment; filename= " + "Prediccion_24h.jpg")
 
 
-    filename_1mes = "/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Predecir/" + username + "/Prediccion_" + username + "_1mes.jpg"
+    filename_1mes = "<<PATH_USUARIO>>/prueba_1/media/Predecir/" + username + "/Prediccion_" + username + "_1mes.jpg"
     attachment_1mes = open(filename_1mes, 'rb')
     part_1mes = MIMEBase('application', 'octet-stream')
     part_1mes.set_payload((attachment_1mes).read())
@@ -132,7 +132,7 @@ def Predict(request,Patient,unidades):
     ########################################################################################################################
     print('\n Preparar variables')
 
-    initial_path = '/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Predecir/'+Patient+'/'
+    initial_path = '/<<PATH_USUARIO>>/prueba_1/media/Predecir/'+Patient+'/'
     input_train_file_name_prefix = Patient
     input_test_file_name_prefix = Patient
 
@@ -159,7 +159,7 @@ def Predict(request,Patient,unidades):
     # ABRIR Y LEER FICHEROS#
     ########################################################################################################################
     test_df = pd.read_csv(str(initial_path + processed_test_file_name), index_col=False)
-    train_df = pd.read_csv(str('/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Re_entrenar/'+Patient+'/' + processed_train_file_name), index_col=False)
+    train_df = pd.read_csv(str('<<PATH_USUARIO>>/prueba_1/media/Re_entrenar/'+Patient+'/' + processed_train_file_name), index_col=False)
 
     ########################################################################################################################
 
@@ -280,7 +280,7 @@ def Predict(request,Patient,unidades):
     plt.xlabel('Puntos temporales')
     plt.ylabel('Valores de Glucosa [BG]')
     plt.legend()
-    plt.savefig("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Predecir/"+Patient+"/Prediccion_"+Patient+ "_1mes.jpg", bbox_inches="tight")
+    plt.savefig("<<PATH_USUARIO>>/prueba_1/media/Predecir/"+Patient+"/Prediccion_"+Patient+ "_1mes.jpg", bbox_inches="tight")
     ##########################################
 
     ########################################## 24 h
@@ -298,7 +298,7 @@ def Predict(request,Patient,unidades):
     plt.xlabel('Puntos temporales')
     plt.ylabel('Valores de Glucosa [BG]')
     plt.legend()
-    plt.savefig("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Predecir/"+Patient+"/Prediccion_" + Patient + "_24h.jpg",bbox_inches="tight")
+    plt.savefig("<<PATH_USUARIO>>prueba_1/media/Predecir/"+Patient+"/Prediccion_" + Patient + "_24h.jpg",bbox_inches="tight")
     ####################################
 
     ################################# 12h
@@ -315,7 +315,7 @@ def Predict(request,Patient,unidades):
     plt.xlabel('Puntos temporales')
     plt.ylabel('Valores de Glucosa [BG]')
     plt.legend()
-    plt.savefig("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Predecir/"+Patient+"/Prediccion_" + Patient + "_12h.jpg",bbox_inches="tight")
+    plt.savefig("<<PATH_USUARIO>>/prueba_1/media/Predecir/"+Patient+"/Prediccion_" + Patient + "_12h.jpg",bbox_inches="tight")
 
     return BOLO_12h,BOLO_24h,CF
     ########################################################################################################################
