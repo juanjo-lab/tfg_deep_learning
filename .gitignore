@@ -1,8 +1,0 @@
-*.*.backup
-*.*~
-*.tar.gz
-*.pyc
-*.log
-*.swp
-db.sqlite3
-app/migrations/
