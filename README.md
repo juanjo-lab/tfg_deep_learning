@@ -23,9 +23,10 @@ Se presenta en este repositorio el código desarrrollado durante el trabajo de f
 Una vez realizado todos los pasos previos, ya podrá disfrutar de la aplicación, como ejemplo, se le proporcionará una red ya entrenada y pacientes modelo.
 
 #### *Correo de recepción*
-Tras la creación dentro de la aplicacio
+Tras la creación dentro de la aplicacion: 
 ![Informe enviado](https://github.com/juanjo-lab/tfg_deep_learning/blob/main/informe.png)
 
+![Informe enviado](https://github.com/juanjo-lab/tfg_deep_learning/blob/main/Prediccion_12h.jpg)
 
 #### *Notas*
 
