@@ -49,7 +49,7 @@ def list(request):
                 newdoc = models.Document(docfile=request.FILES['docfile'])
                 newdoc.save()
                 new_mkdir(request.user.username)
-                if len(glob.glob("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Crear_Red/"+request.user.username+"/"+request.user.username+"-train.csv"))+len(glob.glob("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Crear_Red/"+request.user.username+"/"+request.user.username+"-test.csv")) >= 2:
+                if len(glob.glob("<<PATH_USUARIO>>/prueba_1/media/Crear_Red/"+request.user.username+"/"+request.user.username+"-train.csv"))+len(glob.glob("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Crear_Red/"+request.user.username+"/"+request.user.username+"-test.csv")) >= 2:
                     Numero = 2
                     print("El numero de documentos .csv = " + str(Numero))
                 else:
@@ -87,7 +87,7 @@ def send_email(mail,username):
     )#(titulo de correo, mensaje descriptivo, cuenta de correo, destinatarios)
 
     #adjuntar archivos
-    filename = "/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Crear_Red/"+username+"/Crear_Red_" + username + ".jpg"
+    filename = "/<<PATH_USUARIO>>/prueba_1/media/Crear_Red/"+username+"/Crear_Red_" + username + ".jpg"
     attachment = open(filename, 'rb')
     part = MIMEBase('application', 'octet-stream')
     part.set_payload((attachment).read())
@@ -107,8 +107,8 @@ Se necesita modificar la variable path_1 y path_2
 '''
 ########################################################################################################################
 def new_mkdir(username):
-    path_1 = '/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Crear_Red/'+username
-    path_2 = '/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media'
+    path_1 = '<<PATH_USUARIO>>/prueba_1/media/Crear_Red/'+username
+    path_2 = '<<PATH_USUARIO>>/prueba_1/media'
     isExist = os.path.exists(path_1)
     if not isExist:
         os.makedirs(path_1,exist_ok=True)
@@ -141,8 +141,8 @@ def LSTM_CREAR(request,Patient):
     print('\n Parte 2 de 17 - Preparar variables')
 
     #Buscamos la carpeta donde tenemos nuestros datos preparados
-    initial_path = '/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Crear_Red/'+Patient+'/'
-    initial_path_cp = '/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Re_entrenar/'+Patient+'/'
+    initial_path = '<<PATH_USUARIO>>prueba_1/media/Crear_Red/'+Patient+'/'
+    initial_path_cp = '<<PATH_USUARIO>>prueba_1/media/Re_entrenar/'+Patient+'/'
 
 
     input_train_file_name_prefix = Patient
@@ -364,7 +364,7 @@ def LSTM_CREAR(request,Patient):
     plt.xlabel("a Epoca")
     plt.ylabel("Magnitud de pérdida")
     plt.plot(history.history["loss"])
-    plt.savefig("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Crear_Red/"+Patient+"/Perdidas_+" + Patient + ".jpg", bbox_inches="tight")
+    plt.savefig("<<PATH_USUARIO>>/prueba_1/media/Crear_Red/"+Patient+"/Perdidas_+" + Patient + ".jpg", bbox_inches="tight")
 
       # COGER TIEMPOS DE ENTRENAMIENTO
     training_end_time = dt.datetime.now()
@@ -477,7 +477,7 @@ def LSTM_CREAR(request,Patient):
     plt.xlabel('Puntos temporales')
     plt.ylabel('Valores de Glucosa')
     plt.legend()
-    plt.savefig("/home/juanjo/PycharmProjects/glucosaRNN/Django/prueba_1/prueba_1/media/Crear_Red/"+Patient+"/Crear_Red_" + Patient + ".jpg", bbox_inches="tight")
+    plt.savefig("<<PATH_USUARIO>>/prueba_1/media/Crear_Red/"+Patient+"/Crear_Red_" + Patient + ".jpg", bbox_inches="tight")
 
     print('\n Completado sin errores el plot de las predicciones.  check 16/17 \n')
     ########################################################################################################################
