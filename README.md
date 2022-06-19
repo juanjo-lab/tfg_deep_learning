@@ -30,10 +30,10 @@ Tras la creación dentro de la aplicacion, el informe tras la predicción que se
 
 #### *Notas*
 
-- Los repositorios marcados con "_________________" son repositorios en desuso o sin relevancia en el trabajo de la aplicación presentada.
 - Se enviará un correo de confirmación tras la creación de la red neuronal, tras su reajuste así como el informe enseñado anteriormente tras cada predicción.
 
 #### *Trabajo futuro*
+
 En este capítulo se identifica el trabajo futuro para extender las contribuciones presentadas.
 El proyecto futuro podría mejorar aún más los resultados arrojados sobre la predicción
 glucémica.
