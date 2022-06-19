@@ -8,7 +8,7 @@
 
 #### *Contenido*
 
-Se presenta en este repositorio el código desarrrollado durante el trabajo de fin de grado en el framework Django
+Se presenta en este repositorio el código desarrrollado durante el trabajo de fin de grado en el framework Django.
 
 #### *Guía de instalación*
  
@@ -16,4 +16,5 @@ Se presenta en este repositorio el código desarrrollado durante el trabajo de f
  
  2º- Se deberá instalar las librerias empleadas, las cuales se encuentran en "pip install -r /path/to/requirements.txt".
  
- 3º- Una vez con el entorno virtual creado con las librerias requeridas encontradas en el paso 2º, se accederá a la carpeta donde tenemos alojado manage.py y con el entorno virtual activado " conda activate env"
+ 3º- Una vez con el entorno virtual creado con las librerias requeridas encontradas en el paso 2º, se accederá a la carpeta donde tenemos alojado manage.py      y con el entorno virtual activado "conda activate env", ejecutaremos "python manage.py runserver *<IP del equipo>:Puerto*", tanto la Ip del equipo          como el puerto seleccionado se deberán de configurar en settings.py "ALLOWED_HOSTS = ['<IP del equipo>']"
+
