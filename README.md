@@ -24,7 +24,7 @@ Una vez realizado todos los pasos previos, ya podrá disfrutar de la aplicación
 
 #### *Correo de recepción*
 Tras la creación dentro de la aplicacio
-![Informe enviado](https://github.com/zzuljs/CppLearning/blob/master/CppLearning/raw/master/Itachi.jpg](https://github.com/juanjo-lab/tfg_deep_learning/blob/main/informe.png)
+![Informe enviado](https://github.com/juanjo-lab/tfg_deep_learning/blob/main/informe.png)
 
 
 #### *Notas*
