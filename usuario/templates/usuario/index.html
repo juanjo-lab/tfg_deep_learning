@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+{% block titulo %}MENÚ PRINCIPAL{% endblock %}
+{% block cuerpo %}
+    <h1>MENÚ PRINCIPAL</h1>
+<br><br><br> {% csrf_token %}
+    <form method="get" action="Predecir/Predecir/" target="_blank" >
+    <button type="submit"  >PREDECIR</button>
+    </form>
+<br><br>
+    <form method="get" action="Re_entrenar/Re_entrenar/" target="_blank" >
+    <button type="submit">RE-ENTRENAR</button>
+    </form>
+<br><br>
+    <form method="get" action="Crear_Red/Crear_red/" target="_blank" >
+    <button type="submit">CREAR RED</button>
+    </form>
+<br><br>
+    <body>Nota: Si es la primera vez que inicia sesión, por favor, diríjase a <strong > crear red</body>
+<br>
+{% endblock %}
