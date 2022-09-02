@@ -1,0 +1,3 @@
+nvm list -> versiones de node instaladas
+nvm install <> version
+nvm use
